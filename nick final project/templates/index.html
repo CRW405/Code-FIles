@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai Camp Project</title>
+    <link rel="icon" type="image/png" href="../static/asset/icode-logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-header">
+            <img src="{{ url_for('static', filename='asset/icode-logo.png') }}" class="logo" alt="logo">
+            <a class="gradient title" href="{{ url_for('index') }}">
+                <h1>iCode</h1>
+            </a>
+        </div>
+        <div class="links-container">
+            <a href="{{ url_for('index') }}" class="link">Home</a>
+            <a href="{{ url_for('imgGen') }}" class="link">Image Generator</a>
+            <a href="{{ url_for('textGen') }}" class="link">Text Generation</a>
+            <a href="{{ url_for('codie') }}" class="link">Codie</a>
+        </div>
+        <button class="nav-toggler">
+            <span></span>
+        </button>
+    </nav>
+    <section class="main-container">
+        <div class="home-title">
+            <h1 class="gradient">Ai Camp Projects</h1>
+            <p class="gradient">Created by: My Name Here</p>
+        </div>
+        <div class="wrapper">
+            <div class="project bg-img1">
+                <div class="dark-bg"></div>
+                <div class="slide-up">
+                    <h1>Image Generator</h1>
+                    <p>Project Description</p>
+                    <a href="{{ url_for('imgGen') }}">Try Me</a>
+                </div>
+            </div>
+            <div class="project bg-img2">
+                <div class="dark-bg"></div>
+                <div class="slide-up">
+                    <h1>Text Generation</h1>
+                    <p>Project Description</p>
+                    <a href="{{ url_for('textGen') }}">Try Me</a>
+                </div>
+            </div>
+            <div class="project bg-img3">
+                <div class="dark-bg"></div>
+                <div class="slide-up">
+                    <h1>Codie</h1>
+                    <p>Project Description</p>
+                    <a href="{{ url_for('codie') }}">Try Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-section">
+        <div class="footer-links-container">
+            <a href="{{ url_for('index') }}" class="footer-link">Home</a>
+            <a href="{{ url_for('imgGen') }}" class="footer-link">Image Generator</a>
+            <a href="{{ url_for('textGen') }}" class="footer-link">Text Generation</a>
+            <a href="{{ url_for('codie') }}" class="footer-link">Codie</a>
+        </div>
+        <h5>2024 iCode | All Rights Reserved.</h5>
+    </section>
+    <script src="https://kit.fontawesome.com/f936f45ab8.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='navbar.js') }}"></script>
+</body>
+
+</html>

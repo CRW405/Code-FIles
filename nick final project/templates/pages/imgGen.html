@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iCode: Image Generator</title>
+    <link rel="icon" type="image/png" href="../../static/asset/icode-logo.png">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-header">
+            <img src="{{ url_for('static', filename='asset/icode-logo.png') }}" class="logo" alt="logo">
+            <a class="gradient title" href="{{ url_for('index') }}"><h1>iCode</h1></a>
+        </div>     
+        <div class="links-container">
+            <a href="{{ url_for('index') }}" class="link">Home</a>
+            <a href="{{ url_for('imgGen') }}" class="link">Image Generator</a>
+            <a href="{{ url_for('textGen') }}" class="link">Text Generation</a>
+            <a href="{{ url_for('codie') }}" class="link">Codie</a>
+        </div>
+        <button class="nav-toggler">
+            <span></span>
+        </button>
+    </nav>
+
+    <section class="main-container" id="mainContainer">
+        <div class="home-title">
+            <h1 class="gradient">Image Generator</h1>
+        </div>
+        <div class="wrapper">
+            <div class="image-frame"></div>
+            <div class="input-container">
+                <input class="image-gen-entry" type="text" placeholder="Type something in...">
+                <button class="submit-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                <button class="download-btn">
+                    <a class="download-link"><i class="fa-solid fa-circle-down arrow-down"></i></a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer-section">
+        <div class="footer-links-container">
+            <a href="{{ url_for('index') }}" class="footer-link">Home</a>
+            <a href="{{ url_for('imgGen') }}" class="footer-link">Image Generator</a>
+            <a href="{{ url_for('textGen') }}" class="footer-link">Text Generation</a>
+            <a href="{{ url_for('codie') }}" class="footer-link">Codie</a>
+        </div>
+        <h5>2024 iCode | All Rights Reserved.</h5>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/formdata-polyfill/formdata.min.js"></script>
+    <script src="{{ url_for('static', filename='stable-diffusion.js') }}" type="module" ></script>
+    <script src="{{ url_for('static', filename='navbar.js') }}"></script>
+    <script src="https://kit.fontawesome.com/f936f45ab8.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
